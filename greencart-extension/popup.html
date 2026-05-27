@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h3>GreenCart</h3>
+
+      <div class="section">
+        <div class="label">Destination coordinates</div>
+        <div class="row">
+          <input id="destinationLat" type="number" step="0.000001" placeholder="Lat" />
+          <input id="destinationLng" type="number" step="0.000001" placeholder="Lng" />
+        </div>
+      </div>
+
+      <div class="section">
+        <label class="check">
+          <input id="useExtractedOrigins" type="checkbox" checked />
+          Use extracted item origins (if found)
+        </label>
+      </div>
+
+      <div class="section">
+        <div class="label">Fallback origin (used if item coords aren’t found)</div>
+        <div class="row">
+          <input id="fallbackOriginLat" type="number" step="0.000001" placeholder="Origin lat" />
+          <input id="fallbackOriginLng" type="number" step="0.000001" placeholder="Origin lng" />
+        </div>
+        <div class="row">
+          <input id="cartWeightKg" type="number" step="0.1" min="0" placeholder="Total cart weight (kg)" />
+        </div>
+      </div>
+
+      <button id="calculateBtn" class="primary">Calculate CO2</button>
+      <div id="status" class="status" role="status"></div>
+
+      <div class="section">
+        <div class="label">Result</div>
+        <pre id="result" class="result"></pre>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
+

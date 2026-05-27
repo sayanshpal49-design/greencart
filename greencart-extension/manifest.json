@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "GreenCart — Carbon Footprint Optimizer",
+  "version": "1.0.0",
+  "description": "Estimates cart CO2 using Haversine distance and suggests consolidation.",
+  "action": {
+    "default_title": "GreenCart",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["https://www.amazon.*/*"],
+  "background": {
+    "service_worker": "service_worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.amazon.*/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
+

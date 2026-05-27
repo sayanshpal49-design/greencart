@@ -1,0 +1,15 @@
+target/
+*.iml
+.idea/
+.classpath
+.project
+.settings/
+bin/
+out/
+.DS_Store
+Thumbs.db
+
+# Maven
+/.mvn/
+*.log
+
